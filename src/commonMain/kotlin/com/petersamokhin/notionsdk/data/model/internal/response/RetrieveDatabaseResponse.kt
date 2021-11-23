@@ -159,6 +159,11 @@ internal sealed class RetrieveDatabaseSchemaProperty {
     }
 
     @Serializable
+    @SerialName("relation")
+    data class Relation(override val id: String, override val name: String) : RetrieveDatabaseSchemaProperty()
+
+
+    @Serializable
     @SerialName("formula")
     data class Formula(
         override val id: String,

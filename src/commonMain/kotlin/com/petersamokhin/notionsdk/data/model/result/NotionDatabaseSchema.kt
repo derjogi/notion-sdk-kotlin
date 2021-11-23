@@ -188,4 +188,8 @@ public sealed class NotionDatabasePropertySchema {
     @Serializable
     @SerialName("rollup")
     public data class Rollup(override val id: String, override val name: String) : NotionDatabasePropertySchema()
+
+    @Serializable
+    @SerialName("relation")
+    public data class Relation(override val id: String, override val name: String) : NotionDatabasePropertySchema()
 }

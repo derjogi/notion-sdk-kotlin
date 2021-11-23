@@ -231,7 +231,7 @@ internal sealed class QueryDatabaseResponseResultPageProperty {
     @Serializable
     @SerialName("relation")
     data class Relation(
-        override val id: String,
+        override val id: String
     ) : QueryDatabaseResponseResultPageProperty()
 
     @Serializable

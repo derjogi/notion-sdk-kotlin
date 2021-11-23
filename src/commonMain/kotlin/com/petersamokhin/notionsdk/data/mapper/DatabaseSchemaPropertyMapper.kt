@@ -23,6 +23,7 @@ internal fun RetrieveDatabaseSchemaProperty.toDomain(): NotionDatabasePropertySc
         is RetrieveDatabaseSchemaProperty.LastEditedTime -> toDomain()
         is RetrieveDatabaseSchemaProperty.LastEditedBy -> toDomain()
         is RetrieveDatabaseSchemaProperty.Rollup -> toDomain()
+        is RetrieveDatabaseSchemaProperty.Relation -> toDomain()
     }
 
 internal fun RetrieveDatabaseSchemaProperty.Title.toDomain(): NotionDatabasePropertySchema.Title =
@@ -81,3 +82,6 @@ internal fun RetrieveDatabaseSchemaProperty.LastEditedBy.toDomain(): NotionDatab
 
 internal fun RetrieveDatabaseSchemaProperty.Rollup.toDomain(): NotionDatabasePropertySchema.Rollup =
     NotionDatabasePropertySchema.Rollup(id = id, name = name)
+
+internal fun RetrieveDatabaseSchemaProperty.Relation.toDomain(): NotionDatabasePropertySchema.Relation =
+    NotionDatabasePropertySchema.Relation(id = id, name = name)
